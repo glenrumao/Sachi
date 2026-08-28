@@ -1,0 +1,103 @@
+/* ---- shared field styles ---- */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+  position: relative;
+}
+.field--full { flex-basis: 100%; }
+.field input,
+.field select,
+.field textarea {
+  border: 1px solid var(--color-sand-line);
+  background: #fff;
+  padding: 0.9rem 1rem;
+  font-size: 0.82rem;
+  color: var(--color-text);
+}
+.field input::placeholder,
+.field textarea::placeholder { color: var(--color-placeholder); }
+.field textarea { resize: vertical; }
+.field__error {
+  font-size: 0.65rem;
+  color: #a3432f;
+  letter-spacing: 0.02em;
+}
+.form__row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.form__success {
+  border: 1px solid var(--color-sand-line);
+  background: #fff;
+  padding: 2rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+
+/* ---- "Reach to us" simple variant ---- */
+.reach {
+  padding: var(--space-section) 0;
+}
+.reach__heading {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.reach__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+}
+.reach__submit { align-self: flex-start; margin-top: 0.5rem; }
+
+/* ---- "Customize your emotions" variant ---- */
+.customize {
+  padding: var(--space-section) 0;
+}
+.customize__grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.4fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  background: var(--color-sand);
+  padding: clamp(2rem, 5vw, 3.5rem);
+}
+.customize__intro h2 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  margin-bottom: 2.2rem;
+}
+.customize__contacts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+.customize__contacts li a {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+.customize__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.customize__form .field span.eyebrow { margin-bottom: 0.1rem; }
+.customize__submit {
+  align-self: flex-start;
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 800px) {
+  .customize__grid { grid-template-columns: 1fr; }
+  .form__row { flex-direction: column; gap: 1.2rem; }
+}

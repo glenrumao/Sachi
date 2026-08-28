@@ -1,0 +1,36 @@
+.customized-intro {
+  max-width: 720px;
+  text-align: center;
+  padding: clamp(3rem, 8vw, 5rem) clamp(1.25rem, 4vw, 3.5rem) 1rem;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.customized-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  padding: 3rem clamp(1.25rem, 4vw, 3.5rem) 4rem;
+}
+.customized-step__index {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--color-gold);
+}
+.customized-step h3 {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+.customized-step p {
+  margin-top: 0.7rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 800px) {
+  .customized-steps { grid-template-columns: 1fr; }
+}

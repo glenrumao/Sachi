@@ -1,0 +1,23 @@
+.three-card { padding: var(--space-section) 0 4rem; }
+.three-card__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+.three-card__item h3 {
+  margin-top: 1.2rem;
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+.three-card__item p {
+  margin-top: 0.7rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 800px) {
+  .three-card__grid { grid-template-columns: 1fr; }
+}

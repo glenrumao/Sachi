@@ -1,0 +1,28 @@
+.page-hero {
+  position: relative;
+  min-height: clamp(280px, 38vw, 420px);
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  overflow: hidden;
+}
+.page-hero__image {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(20,18,16,0.55) 0%, rgba(20,18,16,0.72) 100%),
+    linear-gradient(155deg, #4a4741 0%, #262421 60%, #171512 100%);
+  filter: grayscale(0.35);
+}
+.page-hero__title {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+.page-hero__title h1 {
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
