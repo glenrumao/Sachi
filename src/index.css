@@ -36,6 +36,22 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+@media (max-width: 768px) {
+  /* Apply padding globally to content containers */
+  .container {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    box-sizing: border-box;
+  }
+
+  /* Exclude the PageHero title container so it stays edge-to-edge / flush */
+  .page-hero .container,
+  .page-hero__title.container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 500;

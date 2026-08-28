@@ -127,3 +127,20 @@
               url('/images/img5.jpg') center/cover no-repeat;
 }
 }
+
+@media (max-width: 768px) {
+  /* Reset padding specifically for the home page hero */
+  .hero,
+  .hero__content.container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Make sure split cards and banners stay full-bleed */
+  .split,
+  .magic-hands {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
